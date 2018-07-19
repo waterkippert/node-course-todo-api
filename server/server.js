@@ -43,7 +43,7 @@ app.get('/todos/:id', (req, res) => {
       res.status(404).send()
       return console.log('Todo not found');
     }else{
-      return res.status(200).send(`Todo found: ${JSON.stringify(todo, undefined, 2)}`);;
+      return res.status(200).send(todo);
     }
 
     console.log('Find One Todo By Id', todo);
